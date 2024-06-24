@@ -11,6 +11,9 @@ body {
     overflow-wrap: break-word;
 }
 
+nav {
+    background-color: rgb(255, 255, 255);
+}
 
 .navbar-brand {
     font-weight: 500;
@@ -219,15 +222,15 @@ section.module.parallax {
 
 
 section.module.parallax-1 {
-    background-image: url("1.png");
+    background-image: url("../img/1.png");
 }
 
 section.module.parallax-2 {
-    background-image: url("2.png");
+    background-image: url("../img/2.png");
 }
 
 section.module.parallax-3 {
-    background-image: url("aplle.jpg");
+    background-image: url("../img/");
 }
 
 section.module.parallax h1 {

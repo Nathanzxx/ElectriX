@@ -111,41 +111,44 @@
     <main>
 
 
-        <div class="container">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="b31605b692a244d09904c6cbfa55dda6-removebg-preview.png">
-                </div>
-                <div class="contentBx">
-                    <h2>super 22</h2>
-                    <br>
-                    <div class="color">
-                        <h3>Color :</h3>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <br>
-                    <a href="#">comprar</a>
-                </div>
-            </div>
-        </div>
+        <style>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
 
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin: 10px;
+                padding: 20px;
+                width: 200px;
+            }
 
+            .imgBx img {
+                width: 100%;
+                height: auto;
+            }
 
+            .color span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        </style>
+        </head>
 
+        <body>
 
-
-
-
-
-
+            <div class="container" id="cardContainer"></div>
 
     </main>
 
 
 
-
+    <script src="../js/produtos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
