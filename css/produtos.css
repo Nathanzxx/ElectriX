@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.navbar-brand {
+    font-weight: 500;
+    background: linear-gradient(90deg, rgba(0, 207, 191, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 32px;
+    font-family: "Major Mono Display", monospace;
+}
+.mega-menu {
+    display: none;
+    position: absolute;
+    width: 452%;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-item:hover .mega-menu {
+    display: block;
+}
+
+.dropdown-column {
+    width: 25%;
+    flex: 1 1 25%;
+    /* float: left; */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dropdown-column h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dropdown-column .dropdown-item {
+    display: block;
+    padding: 5px 10px;
+    clear: both;
+    color: #000;
+    text-align: left;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.dropdown-column .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure items are not overlapping by setting a minimum width */
+.dropdown-column {
+    min-width: 200px; /* Adjust based on your needs */
+}
+.offcanvas-title {
+    background: linear-gradient(90deg, rgba(0, 207, 191, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: "Major Mono Display", monospace;
+}
+
+.btn-outline-secondary.icon-button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-outline-secondary.icon-button:hover,
+.btn-outline-secondary.icon-button:focus {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: rgba(0, 207, 191, 1);
+}
+
+.login-button {
+    background-color: rgb(125, 201, 194);
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    border: none;
+}
+
+.login-button:hover {
+    background-color: rgb(48, 241, 241);
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link-active {
+    color: rgb(125, 201, 194);
+}
+
+@media(min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(125, 201, 194);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+}
+
+/* cartas */
+
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: rgb(125, 201, 194);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    font-family: "Major Mono Display", monospace;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    content: 'Super';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.074);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+}
+
+.container .card:hover .imgBx {
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0%;
+    transform: translateY(0%);
+    transform: rotate(-25deg);
+}
+
+.container .card .contentBx {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .card:hover .contentBx {
+    height: 210px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.container .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+    background: white;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+    background: black;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+    background: #e91e63;
+}
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
