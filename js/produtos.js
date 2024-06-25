@@ -1,31 +1,178 @@
-const cardsData = [
+const categoryData = [
     {
-        "imgSrc": "foneproduto.png",
-        "title": "Super 22",
-        "colors": ["#ff0000", "#00ff00", "#0000ff"],
-        "link": "#"
+        id: "cardContainer1",
+        items: [
+            {
+                "imgSrc": "foneproduto.png",
+                "title": "Super 22",
+                "colors": ["#ff0000", "#00ff00", "#0000ff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 33",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 39",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 39",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 39",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 44",
+                "colors": ["#000000", "#ffffff", "#ff0000"],
+                "link": "#"
+            }
+        ]
     },
     {
-        "imgSrc": "anotherImage.png",
-        "title": "Super 33",
-        "colors": ["#ffff00", "#ff00ff", "#00ffff"],
-        "link": "#"
+        id: "cardContainer2",
+        items: [
+            {
+                "imgSrc": "foneproduto.png",
+                "title": "Super 23",
+                "colors": ["#ff0000", "#00ff00", "#0000ff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 34",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 40",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 40",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 40",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 45",
+                "colors": ["#000000", "#ffffff", "#ff0000"],
+                "link": "#"
+            }
+        ]
     },
     {
-        "imgSrc": "anotherImage.png",
-        "title": "Super 39",
-        "colors": ["#ffff00", "#ff00ff", "#00ffff"],
-        "link": "#"
+        id: "cardContainer3",
+        items: [
+            {
+                "imgSrc": "foneproduto.png",
+                "title": "Super 24",
+                "colors": ["#ff0000", "#00ff00", "#0000ff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 35",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 41",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 41",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 41",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 46",
+                "colors": ["#000000", "#ffffff", "#ff0000"],
+                "link": "#"
+            }
+        ]
     },
+    {
+        id: "cardContainer4",
+        items: [
+            {
+                "imgSrc": "foneproduto.png",
+                "title": "Super 25",
+                "colors": ["#ff0000", "#00ff00", "#0000ff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 36",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 42",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 42",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 42",
+                "colors": ["#ffff00", "#ff00ff", "#00ffff"],
+                "link": "#"
+            },
+            {
+                "imgSrc": "anotherImage.png",
+                "title": "Super 47",
+                "colors": ["#000000", "#ffffff", "#ff0000"],
+                "link": "#"
+            }
+        ]
+    }
 ];
 
-const container = document.getElementById('cardContainer');
+categoryData.forEach(category => {
+    const container = document.getElementById(category.id);
 
-cardsData.forEach(card => {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('card');
+    category.items.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
 
-    cardElement.innerHTML = `
+        cardElement.innerHTML = `
 <div class="imgBx">
     <img src="${card.imgSrc}" alt="${card.title}">
 </div>
@@ -41,5 +188,6 @@ cardsData.forEach(card => {
 </div>
 `;
 
-    container.appendChild(cardElement);
+        container.appendChild(cardElement);
+    });
 });
