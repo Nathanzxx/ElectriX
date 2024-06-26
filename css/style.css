@@ -43,7 +43,6 @@ nav {
 .dropdown-column {
     width: 25%;
     flex: 1 1 25%;
-    /* float: left; */
     padding: 10px;
     box-sizing: border-box;
 }
