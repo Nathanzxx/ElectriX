@@ -152,6 +152,7 @@
 
     --body-font: "Poppins", sans-serif;
     --second-font: "Syncopate", sans-serif;
+    --ff-urbanist: 'Urbanist', sans-serif;
     --biggest-font-size: 2.5rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
@@ -353,31 +354,180 @@
     }
 }
 
-.collection { padding-block-start: 0; }
+
+.collection { 
+    padding-block-start: 0; 
+    margin-block-end: 50px; 
+}
 
 .collection-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o padding padrão da lista */
+  margin: 0; /* Remove a margem padrão da lista */
 }
 
 .collection-card {
-  background-color: var(--light-gray);
   min-height: 400px;
-  padding: 40px;
   padding-block-end: 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
-.collection-card .card-title { margin-block-end: 12px; }
+.collection-card .card-title { 
+    margin-block-end: 12px; 
+    position: relative;
+    z-index: 1;
+      font-family: var(--ff-urbanist);
+}
 
 .collection-card .card-text {
   color: black;
-  font-size: var(--fs-6);
+  font-size: 1.8rem;
   font-weight: 600;
   margin-block-end: auto;
-}
+  position: relative;
+  z-index: 1;
 
+}
+.has-bg-image {
+    position: absolute;
+    bottom: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; /* Garante que a imagem fique atrás do texto */
+    opacity: 0.8; 
+  }
+  .has-scrollbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espaço entre os itens */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .shop-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    height: 400px;
+  }
+  
+  .shop-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .shop-card .card-banner {
+    position: relative;
+  }
+
+  
+  .shop-card .card-banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .shop-card .badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--hoockers-green);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .shop-card .card-actions {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .shop-card:hover .card-actions {
+    opacity: 1;
+  }
+  
+  .shop-card .action-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-card .action-btn:hover {
+    background-color: var(--hoockers-green);
+    color: #fff;
+  }
+  
+  .shop-card .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .shop-card .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .shop-card .del {
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  .shop-card .span {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .shop-card .card-title {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 0.8em;
+  }
+  
+  .shop-card .card-title:hover {
+    color: var(--hoockers-green);
+  }
+  
+  .shop-card .card-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--hoockers-green);
+  }
+  
+  .shop-card .rating-text {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+
+  .container {
+    padding: 20px;
+    margin: 0 auto;
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
