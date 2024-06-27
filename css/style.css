@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
 body {
     margin: 0;
     padding: 0;
@@ -260,11 +259,7 @@ section.module.parallax h1 {
     }
 }
 
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
@@ -284,6 +279,13 @@ footer {
     max-width: 1400px;
     padding: 0 4%;
     margin: auto;
+}
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+    margin-left: 400px;
 }
 
 .row-footer {

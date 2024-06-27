@@ -54,9 +54,6 @@
 .dropdown-column {
     min-width: 200px;
 }
-
-
-
 .offcanvas-title {
     background: linear-gradient(90deg, rgba(0, 207, 191, 1) 0%, rgba(0, 0, 0, 1) 100%);
     background-clip: text;
@@ -132,15 +129,14 @@
         visibility: visible;
     }
 }
+/* ========== FIM DO NAVBAR ========== */
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate:wght@400;700&display=swap");
 
 :root {
-    /* --header-height: 3.5rem; */
   
-    /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
+    /*========== Cores ==========*/
     --black-color: hsl(0, 0%, 5%);
     --black-color-light: hsl(0, 0%, 70%);
     --white-color: hsl(0, 0%, 100%);
@@ -148,7 +144,7 @@
     --text-color: hsl(0, 0%, 55%);
     --body-color: hsl(0, 0%, 96%);
   
-    /*========== Font and typography ==========*/
+    /*========== Fontes ==========*/
 
     --body-font: "Poppins", sans-serif;
     --second-font: "Syncopate", sans-serif;
@@ -157,8 +153,7 @@
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
-  
-    /*========== Font weight ==========*/
+
     --font-regular: 400;
     --font-bold: 700;
   
@@ -171,7 +166,6 @@
       --small-font-size: .875rem;
     }
   }
-/*=============== BASE ===============*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -191,8 +185,7 @@
     max-width: 100%;
     height: auto;
   }
-  
-  /*=============== REUSABLE CSS CLASSES ===============*/
+
   .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
@@ -200,8 +193,9 @@
 /*=============== HOME ===============*/
 .home {
     display: grid;
-    place-items: center; /* Centraliza horizontalmente e verticalmente */
-    height: 100vh; /* Define a altura da seção para 100% da altura da viewport */
+    place-items: center; 
+    height: 100vh; 
+    background-color: rgb(187, 236, 224);
 }
 
 .home__container{
@@ -265,7 +259,6 @@
     margin: auto;
 }
 
-/* Swiper class */
 .home__swiper {
     overflow: hidden;
 }
@@ -541,6 +534,7 @@ footer {
     max-width: 1400px;
     padding: 0 4%;
     margin: auto;
+    margin-left: 400px;
 }
 
 .row-footer {
