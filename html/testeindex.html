@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/testeindex.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <header class="header">
+
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="header-actions">
+
+          <button class="header-action-btn" aria-label="favourite item">
+            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+
+          <button class="header-action-btn" aria-label="cart item">
+
+            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="#collection" class="navbar-link has-after">Produtos</a>
+            </li>
+
+            <li>
+              <a href="#shop" class="navbar-link has-after">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--====== NAVBAR ===== -->
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#collection" class="navbar-link" data-nav-link>Collection</a>
+        </li>
+
+        <li>
+          <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+        </li>
+
+        <li>
+          <a href="#offer" class="navbar-link" data-nav-link>Offer</a>
+        </li>
+
+        <li>
+          <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+
+  <section class="home">
+    <div class="home__container container">
+      <div class="home__data">
+
+        <h1 class="home__title">SOMNIUM PRO</h1>
+
+        <p class="home__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+          similique vitae, aperiam provident deserunt in! Illum, nisi nobis magni distinctio architecto
+          sint temporibus perferendis doloremque.</p>
+
+        <a href="#" class="home__button">Compre agora</a>
+      </div>
+      <div class="home__images">
+        <div class="home__circle"></div>
+
+        <div class="home__swiper swiper">
+          <div class="swiper-wrapper">
+            <article class="home__article swiper-slide">
+              <img src="../img/produto.png" alt="imagem" class="home__fone">
+            </article>
+            <article class="home__article swiper-slide">
+              <img src="../img/produto2.png" alt="imagem" class="home__fone">
+            </article>
+            <article class="home__article swiper-slide">
+              <img src="../img/produto3.png" alt="imagem" class="home__fone">
+            </article>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== COLEÇAO ===== -->
+  <section class="section collection" id="collection" aria-label="collection" data-section>
+    <div class="container">
+
+      <ul class="collection-list">
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Teclados</h2>
+
+            <p class="card-text">Starting at $17.99</p>
+
+            <a href="#" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/2.png')"></div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Mouse</h2>
+
+            <p class="card-text">Get the glow</p>
+
+            <a href="#" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+            <div class="has-bg-image" style="background-image: url('../img/3.png')"></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Fones</h2>
+
+            <p class="card-text">Starting at $7.99</p>
+
+            <a href="#" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/fones.png')"></div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="category">
+    <h2 class="lado">Mouse</h2>
+    <div class="card-container, lado" id="mouseContainer"></div>
+</div>
+<br>
+<br>
+<div class="category">
+    <h2 class="lado">Teclado</h2>
+    <div class="card-container, lado" id="tecladoContainer"></div>
+</div>
+<br>
+<br>
+<div class="category">
+    <h2 class="lado">Headset</h2>
+    <div class="card-container, lado" id="headsetContainer"></div>
+</div>
+<br>
+<br>
+<div class="category">
+    <h2 class="lado">Microfones</h2>
+    <div class="card-container, lado" id="microfoneContainer"></div>
+</div>
+<br>
+<br>
+  
+<!-- ======= VOLTAR PARA O INICIO ====== -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+  <footer>
+    <div class="container-footer" id="footer">
+      <div class="row-footer">
+
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">devoluções</a></li>
+            <li><a href="#">Status De Pedido</a></li>
+            <li><a href="#">Opções De Pagamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Loja online</h4>
+          <ul>
+            <li><a href="#">Fone</a></li>
+            <li><a href="#">Microfone</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Teclado</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Se subescreva!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+            </form>
+          </div>
+
+          <div class="medias-socias">
+            <a href="#"> <i class="fa fa-facebook"></i> </a>
+            <a href="#"> <i class="fa fa-instagram"></i> </a>
+            <a href="#"> <i class="fa fa-twitter"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/testeindex.js" defer></script>
+
+
+  <!-- 
+    - ionicon link
+  -->
+    <script src="../js/produtos.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
