@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/testeindex.css">
+  <link rel="stylesheet" href="../css/testeprodutos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,23 +29,6 @@
           <span class="line line-3"></span>
         </button>
 
-        <div class="header-actions">
-
-          <button class="header-action-btn" aria-label="favourite item">
-            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button>
-
-          <button class="header-action-btn" aria-label="cart item">
-
-            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button>
-
-        </div>
-
         <nav class="navbar">
           <ul class="navbar-list">
 
@@ -62,6 +45,17 @@
             </li>
           </ul>
         </nav>
+        <div class="header-actions">
+          <button class="header-action-btn" aria-label="favourite item">
+            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+            <span class="btn-badge">0</span>
+          </button>
+    
+          <button class="header-action-btn" aria-label="cart item">
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+            <span class="btn-badge">0</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -153,7 +147,7 @@
 
             <p class="card-text">Starting at $17.99</p>
 
-            <a href="#" class="btn-link">
+            <a href="#teclado" class="btn-link">
               <span class="span">Ver mais</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -171,7 +165,7 @@
 
             <p class="card-text">Get the glow</p>
 
-            <a href="#" class="btn-link">
+            <a href="#mouse" class="btn-link">
               <span class="span">Ver mais</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -187,7 +181,7 @@
 
             <p class="card-text">Starting at $7.99</p>
 
-            <a href="#" class="btn-link">
+            <a href="#fone" class="btn-link">
               <span class="span">Ver mais</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -200,30 +194,52 @@
       </ul>
     </div>
   </section>
-  <div class="category">
-    <h2 class="lado">Mouse</h2>
-    <div class="card-container, lado" id="mouseContainer"></div>
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Mouse</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-mouse">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+ <div class="category" id="mouse">
+    <div class="card-container lado" id="mouseContainer"></div>
+  </div>
+  
 </div>
 <br>
 <br>
-<div class="category">
-    <h2 class="lado">Teclado</h2>
-    <div class="card-container, lado" id="tecladoContainer"></div>
+
+<div class="title-wrapper">
+  <h2 class="h2 section-title">Teclados</h2>
+
+  <a href="#" class="btn-link" id="arrow-right-teclados">
+    <span class="span">Ver mais</span>
+
+    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+  </a>
+</div>
+<div class="category" id="teclado">
+    <div class="card-container lado" id="tecladoContainer"></div>
 </div>
 <br>
 <br>
-<div class="category">
-    <h2 class="lado">Headset</h2>
-    <div class="card-container, lado" id="headsetContainer"></div>
+<div class="title-wrapper">
+  <h2 class="h2 section-title">Headset</h2>
+
+  <a href="#" class="btn-link" id="arrow-right-headset">
+    <span class="span">Ver mais</span>
+
+    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+  </a>
+</div>
+<div class="category" id="fone">
+    <div class="card-container lado" id="headsetContainer"></div>
 </div>
 <br>
 <br>
-<div class="category">
-    <h2 class="lado">Microfones</h2>
-    <div class="card-container, lado" id="microfoneContainer"></div>
-</div>
-<br>
-<br>
+
   
 <!-- ======= VOLTAR PARA O INICIO ====== -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
@@ -272,17 +288,13 @@
     </div>
   </footer>
 
-  <!-- 
-    - custom js link
-  -->
+ 
   <script src="../js/swiper-bundle.min.js"></script>
-  <script src="../js/testeindex.js" defer></script>
+
+   <script src="../js/produtos.js"></script>
+  <script src="../js/testeprodutos.js" defer></script>
 
 
-  <!-- 
-    - ionicon link
-  -->
-    <script src="../js/produtos.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

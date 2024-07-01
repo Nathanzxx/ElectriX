@@ -304,15 +304,24 @@
     height: 100%;
     object-fit: cover;
   }
-  
-  .badge {
+  /* .btn-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  } */
+  /* .badge {
     max-width: max-content;
     background-color: var(--hoockers-green);
     color: var(--white);
     font-weight: var(--fw-700);
     padding-inline: 12px;
     border-radius: var(--radius-3);
-  }
+  } */
   
   .flex-list {
     display: flex;
@@ -347,11 +356,11 @@
   .header-action-btn:not(:first-child),
   .navbar { display: none; }
   
-  .header {
+   .header {
     position: relative;
     padding-block-end: 20px;
   }
-  .header-actions {
+  /* .header-actions {
     position: absolute;
     top: 50%;
     right: 0;
@@ -359,8 +368,20 @@
     gap: 10px;
     padding: 10px;
     transform: translateY(-50%);
-    height: 100%;
+
     align-items: center;
+    overflow: visible;
+  }  */
+  .header-action-btn {
+    font-size: 28px;
+    transition: var(--transition-1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Ajuste conforme necessário */
+    width: 50px;  /* Ajuste conforme necessário */
+    overflow: visible; /* Certifique-se de que o ícone não seja cortado */
   }
   .alert {
     background-color: var(--pale-spring-bud);
@@ -426,10 +447,15 @@
     font-size: 28px;
     transition: var(--transition-1);
     position: relative;
-
-  }
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; 
+  width: 50px;  
+  overflow: visible;
+  } 
   
-  .header-action-btn:is(:hover, :focus) { color: var(--black_70); }
+  /* .header-action-btn:is(:hover, :focus) { color: var(--black_70); } */
   
   
   
@@ -643,7 +669,10 @@
     font-weight: var(--fw-600);
     margin-block-end: auto;
   }
-  
+  .title-wrapper{
+    margin: 58px;
+    color: black;
+  }
   /*-----------------------------------*\
     #BACK TO TOP
   \*-----------------------------------*/
@@ -1117,15 +1146,22 @@
   
   }
 
-  .card {
+  .card { 
+    flex: 0 0 auto;
     position: relative;
-    width: 320px;
-    height: 480px;
+    width: 289px;
+    height: 489px;
     background: black;
     border-radius: 20px;
     overflow: hidden;
 }
-
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-top: 20px;
+  padding: 20px;
+}
 .card::before {
     content: "";
     position: absolute;

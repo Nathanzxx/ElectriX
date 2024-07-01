@@ -31,7 +31,23 @@ const cardsData = [
         link: "#",
         category: "Mouse"
     },
+    {
+        imgSrc: "../img/produto2.png",
+        altText: "Mouse Logitech G Pro",
+        price: "89.99",
+        currency: "€",
+        link: "#",
+        category: "Mouse"
+    },
     // mouses //
+    {
+        imgSrc: "../img/produto2.png",
+        altText: "Teclado Logitech G Pro",
+        price: "89.99",
+        currency: "€",
+        link: "#",
+        category: "Teclado"
+    },
     {
         imgSrc: "../img/produto2.png",
         altText: "Teclado Logitech G Pro",
@@ -97,40 +113,15 @@ const cardsData = [
         link: "#",
         category: "Headset"
     },
+    {
+        imgSrc: "../img/produto3.png",
+        altText: "Headset HyperX Cloud II",
+        price: "99.95",
+        currency: "€",
+        link: "#",
+        category: "Headset"
+    },
     // headsets //
-    {
-        imgSrc: "../img/produto3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
-        currency: "€",
-        link: "#",
-        category: "Microfone"
-    },
-    {
-        imgSrc: "../img/produto3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
-        currency: "€",
-        link: "#",
-        category: "Microfone"
-    },
-    {
-        imgSrc: "../img/produto3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
-        currency: "€",
-        link: "#",
-        category: "Microfone"
-    },
-    {
-        imgSrc: "../img/produto3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
-        currency: "€",
-        link: "#",
-        category: "Microfone"
-    },
-    // microfones //
 ];
 
 function createCard(card, containerId) {
@@ -172,3 +163,29 @@ cardsData.forEach(card => {
             break;
     }
 });
+
+document.getElementById('arrow-right-mouse').addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollCards('mouseContainer');
+  });
+  
+  document.getElementById('arrow-right-teclados').addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollCards('tecladoContainer');
+  });
+  
+  document.getElementById('arrow-right-headset').addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollCards('headsetContainer');
+  });
+  
+  function scrollCards(containerId) {
+    const cardContainer = document.getElementById(containerId);
+    const cardWidth = cardContainer.querySelector('.card').offsetWidth;
+    const scrollAmount = cardWidth + 20; // 20px é a margem do card (ajuste conforme necessário)
+    
+    cardContainer.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }

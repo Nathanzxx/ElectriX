@@ -1,5 +1,3 @@
-
-
 let swiperFones = new Swiper('.home__swiper', {
     loop: true,
     spaceBetween: 32,
