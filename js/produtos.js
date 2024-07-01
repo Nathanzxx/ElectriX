@@ -4,7 +4,7 @@ const cardsData = [
         altText: "Mouse Corsair M65",
         price: "61.98",
         currency: "€",
-        link: "#",
+        link: "compra1.html",
         category: "Mouse"
     },
     {
