@@ -1,6 +1,6 @@
 const cardsData = [
     {
-        imgSrc: "../img/produto1.png",
+        imgSrc: "../img/mouse1.png",
         altText: "Mouse Corsair M65",
         price: "61.98",
         currency: "€",
@@ -8,7 +8,7 @@ const cardsData = [
         category: "Mouse"
     },
     {
-        imgSrc: "../img/produto4.png",
+        imgSrc: "../img/mouse2.png",
         altText: "Mouse Gamer RGB",
         price: "79.99",
         currency: "€",
@@ -16,7 +16,7 @@ const cardsData = [
         category: "Mouse"
     },
     {
-        imgSrc: "../img/produto4.png",
+        imgSrc: "../img/mouse4.png",
         altText: "Mouse Gamer RGB",
         price: "79.99",
         currency: "€",
@@ -24,7 +24,7 @@ const cardsData = [
         category: "Mouse"
     },
     {
-        imgSrc: "../img/produto4.png",
+        imgSrc: "../img/mouse5.png",
         altText: "Mouse Gamer RGB",
         price: "79.99",
         currency: "€",
@@ -32,7 +32,7 @@ const cardsData = [
         category: "Mouse"
     },
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/mouse3.png",
         altText: "Mouse Logitech G Pro",
         price: "89.99",
         currency: "€",
@@ -41,7 +41,7 @@ const cardsData = [
     },
     // mouses //
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/teclado1.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
@@ -49,7 +49,7 @@ const cardsData = [
         category: "Teclado"
     },
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/teclado2.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
@@ -82,7 +82,7 @@ const cardsData = [
     },
     // teclados //
     {
-        imgSrc: "../img/produto3.png",
+        imgSrc: "../img/fone1.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
         currency: "€",
@@ -90,7 +90,7 @@ const cardsData = [
         category: "Headset"
     },
     {
-        imgSrc: "../img/produto3.png",
+        imgSrc: "../img/fone3.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
         currency: "€",
@@ -98,7 +98,7 @@ const cardsData = [
         category: "Headset"
     },
     {
-        imgSrc: "../img/produto3.png",
+        imgSrc: "../img/fone4.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
         currency: "€",
@@ -106,7 +106,7 @@ const cardsData = [
         category: "Headset"
     },
     {
-        imgSrc: "../img/produto3.png",
+        imgSrc: "../img/fone5.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
         currency: "€",
