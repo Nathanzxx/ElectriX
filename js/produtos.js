@@ -137,7 +137,7 @@ function createCard(card, containerId) {
         <div class="contentBox">
             <h3>${card.altText}</h3>
             <h2 class="price">${card.price}<small>${card.currency}</small></h2>
-            <a href="${card.link}" class="buy">Buy Now</a>
+            <a href="${card.link}" class="buy">Comprar agora</a>
         </div>
     `;
 
