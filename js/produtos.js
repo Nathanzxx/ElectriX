@@ -57,7 +57,7 @@ const cardsData = [
         category: "Teclado"
     },
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/teclado3.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
@@ -65,7 +65,7 @@ const cardsData = [
         category: "Teclado"
     },
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/teclado4.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
@@ -73,7 +73,7 @@ const cardsData = [
         category: "Teclado"
     },
     {
-        imgSrc: "../img/produto2.png",
+        imgSrc: "../img/teclado5.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
