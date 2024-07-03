@@ -29,33 +29,40 @@
           <span class="line line-3"></span>
         </button>
 
-   
+
 
         <a href="#" class="logo">
           <img src="../img/logo.png" width="85" height="26" alt="Glowing">
         </a>
         <span class="brand-name">eletrix</span>
         <div class="header-actions">
-
           <a href="login.html">
-          <button class="header-action-btn" aria-label="user">
-            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-          </button></a>
+            <button class="header-action-btn" aria-label="user">
+              <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            </button></a>
 
-          <button class="header-action-btn" aria-label="favourite item">
+          <!-- <button class="header-action-btn" aria-label="favourite item">
             <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
 
             <span class="btn-badge">0</span>
-          </button>
+          </button> -->
 
-          <button class="header-action-btn" aria-label="cart item">
-        
-
+          <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
             <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
+            <!-- <span class="btn-badge">0</span>  -->
           </button>
-
+          <div class="cart">
+            <h2 class="cart-title">Carrinho</h2>
+            <div class="cart-content">
+              
+            </div>
+            <div class="total">
+              <total class="total-title">Total</total>
+              <total class="total-price">R$0</total>
+            </div>
+            <button type="button" class="btn-buy">Pagar agora</button>
+            <button class="close-btn" id="close-cart">&times;</button>
+          </div>
         </div>
 
         <nav class="navbar">
@@ -66,15 +73,12 @@
             </li>
 
             <li>
-              <a href="testeprodutos.html" class="navbar-link has-after">Produtos</a>
+              <a href="#collection" class="navbar-link has-after">Produtos</a>
             </li>
 
             <li>
               <a href="#footer" class="navbar-link has-after">Contato</a>
             </li>
-
-       
-
           </ul>
         </nav>
 
@@ -82,6 +86,7 @@
     </div>
 
   </header>
+
 
 
 
@@ -107,7 +112,7 @@
         </li>
 
         <li>
-          <a href="testeprodutos.html" class="navbar-link" data-nav-link>Produtos</a>
+          <a href="#collection" class="navbar-link" data-nav-link>Produtos</a>
         </li>
 
         <li>
@@ -123,113 +128,57 @@
   <br>
   <br>
   <h1 class="infoproduto">Informações do produto</h1>
-  <div class="product-container">
-    
-      <div class="product-content">
-          <div class="product-thumbnails">
-              <img src="../img/fone1.png" alt="Thumbnail 1" onclick="changeImage('../img/fone1.png')" class="active">
-              <img src="../img/fone3.png" alt="Thumbnail 2" onclick="changeImage('image_url_2')">
-              <img src="../img/fone4.png" alt="Thumbnail 3" onclick="changeImage('image_url_3')">
-              <img src="../img/fone5.png" alt="Thumbnail 4" onclick="changeImage('image_url_4')">
-          </div>
-          <div class="product-image">
-              <img id="main-product-image" src="../img/fonebranco.png" alt="Black Automatic Watch">
-          </div>
-          <div class="product-purchase">
-            <h4>Somnium pro</h4>
-             <div class="rating">
-                  ⭐ <span>4.3 - 162 reviews</span>
-              </div>
-              <div class="product-price">$169.99 <span class="old-price">$180.00</span></div>
-              <label for="colors">Cores:</label>
-              <div class="color-options">
-                  <span style="background-color: black;" onclick="changeImage('image_url_1')" class="active"></span>
-                  <span style="background-color: red;" onclick="changeImage('image_url_2')"></span>
-                  <span style="background-color: blue;" onclick="changeImage('image_url_3')"></span>
-                  <span style="background-color: green;" onclick="changeImage('image_url_4')"></span>
-              </div>
-              <label for="quantity">Quantidade:</label>
-              <input type="number" id="quantity" value="1" min="1">
-              <button>Adicionar ao carrinho</button>
-             
-          </div>
-      </div>
-      <div class="product-details">
-          <h2>Black Automatic Watch</h2>
-          <p>The St. Louis Mercantile Canoe Company was founded by Alfred Wickett in 1922. Wickett had previously worked for the Old Town Canoe Co. from 1900 to 1914. Manufacturing of the classic wooden canoes in Valley Park, Missouri ceased in 1978.</p>
-          <h3>Fabric + Care</h3>
-          <p>Material: Soft wool blend<br>
-             Color: Various</p>
-          <h3>Sale performance</h3>
-          <p>Sales: 0<br>
-             Review Count: -<br>
-             Review Average: -</p>
-          <div class="keywords">
-              <span># men's fashion</span>
-              <span># men's hat</span>
-              <span># colorful accessory</span>
-              <span># warm headwear</span>
-          </div>
-      </div>
-  </div>
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-thumbnails">
+                <img src="../img/fone1.png" alt="Thumbnail 1" onclick="changeImage('../img/fone1.png')" class="active">
+                <img src="../img/fone3.png" alt="Thumbnail 2" onclick="changeImage('../img/fone3.png')">
+                <img src="../img/fone4.png" alt="Thumbnail 3" onclick="changeImage('../img/fone4.png')">
+                <img src="../img/fone5.png" alt="Thumbnail 4" onclick="changeImage('../img/fone5.png')">
+            </div>
+            <div class="product-image">
+                <img id="main-product-image" src="../img/fonebranco.png" alt="Black Automatic Watch">
+            </div>
+            <div class="product-purchase">
+                <h4 class="product-title">Somnium pro</h4>
+                <div class="rating">
+                    ⭐ <span>4.3 - 162 reviews</span>
+                </div>
+                <div class="product-price">$169.99 <span class="old-price">$180.00</span></div>
+                <label for="colors">Cores:</label>
+                <div class="color-options">
+                    <span style="background-color: black;" onclick="changeImage('../img/fone1.png')" class="active"></span>
+                    <span style="background-color: red;" onclick="changeImage('../img/fone3.png')"></span>
+                    <span style="background-color: blue;" onclick="changeImage('../img/fone4.png')"></span>
+                    <span style="background-color: green;" onclick="changeImage('../img/fone5.png')"></span>
+                </div>
+                <button class="add-cart">Adicionar ao carrinho</button>
+                <div class="cart-content">
+                    <!-- Carrinho vai ser populado dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>Black Automatic Watch</h2>
+            <p>The St. Louis Mercantile Canoe Company was founded by Alfred Wickett in 1922. Wickett had previously worked for the Old Town Canoe Co. from 1900 to 1914. Manufacturing of the classic wooden canoes in Valley Park, Missouri ceased in 1978.</p>
+            <h3>Fabric + Care</h3>
+            <p>Material: Soft wool blend<br>
+            Color: Various</p>
+            <h3>Sale performance</h3>
+            <p>Sales: 0<br>
+            Review Count: -<br>
+            Review Average: -</p>
+            <div class="keywords">
+                <span># men's fashion</span>
+                <span># men's hat</span>
+                <span># colorful accessory</span>
+                <span># warm headwear</span>
+            </div>
+        </div>
+    </div>
 
 <br>
 <br>
-<br>
-<br>
-
-  
-<!-- <section class="product">
-	<div class="product__photo">
-		<div class="photo-container">
-			<div class="photo-main">
-				<div class="controls">
-					<button class="header-action-btn" aria-label="favourite item">
-                        <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-                      </button>
-				</div>
-				<img src="../img/mouse1.png" alt="mouse preto">
-			</div>
-			<div class="photo-album">
-				<ul>
-					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="green apple"></li>
-					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303532/codepen/delicious-apples/half-apple.png" alt="half apple"></li>
-					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303160/codepen/delicious-apples/green-apple-flipped.png" alt="green apple"></li>
-					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303708/codepen/delicious-apples/apple-top.png" alt="apple top"></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="product__info">
-		<div class="title">
-			<h1>ShadowStrike</h1>
-			<span>COD: 45999</span>
-		</div>
-		<div class="price">
-			R$ <span>7.93</span>
-		</div>
-		<div class="variant">
-			<h3>SELECT A COLOR</h3>
-			<ul>
-				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="green apple"></li>
-				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302752/codepen/delicious-apples/yellow-apple.png" alt="yellow apple"></li>
-				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="orange apple"></li>
-				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="red apple"></li>
-			</ul>
-		</div>
-		<div class="description">
-			<h3>BENEFITS</h3>
-			<ul>
-				<li>Apples are nutricious</li>
-				<li>Apples may be good for weight loss</li>
-				<li>Apples may be good for bone health</li>
-				<li>They're linked to a lowest risk of diabetes</li>
-			</ul>
-		</div>
-		<button class="buy--btn">ADD TO CART</button>
-	</div>
-</section> -->
-
 <!-- ======= VOLTAR PARA O INICIO ====== -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
@@ -283,6 +232,7 @@
 <script src="../js/compras.js"></script>
 <script src="../js/produtos.js"></script>
   <script src="../js/testeindex.js" defer></script>
+  <script src="../js/carrinho.js"></script>
 
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
