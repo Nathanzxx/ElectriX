@@ -8,6 +8,7 @@ const cardsData = [
         category: "Mouse"
     },
     {
+        id: 2,
         imgSrc: "../img/mouse2.png",
         altText: "Mouse Gamer RGB",
         price: "79.99",

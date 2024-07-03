@@ -2,160 +2,292 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/compras.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe produtos</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/compras.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand me-auto" href="#">electrix</a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">electrix</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item position-relative">
-                            <a class="nav-link mx-lg-2" href="produtos.html" id="produtosMenu">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" aria-current="page" href="#footer">Contato</a>
-                        </li>
+<body id="top">
 
-                    </ul>
-                    <!-- Botão de Login dentro do offcanvas -->
-                    <div class="d-lg-none">
-                        <a href="#" class="btn btn-outline-primary login-button">Login</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Ícones de bolsa e coração fora do offcanvas -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="btn btn-outline-secondary icon-button me-2 border-0" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasShoppingBag">
-                    <i class="fas fa-shopping-bag fa-lg"></i>
-                </a>
-                <a href="#" class="btn btn-outline-secondary icon-button me-2 border-0" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasHeart">
-                    <i class="fas fa-heart fa-lg"></i>
-                </a>
-                <!-- Botão de Login que aparece apenas em telas grandes -->
-                <div class="d-none d-lg-block">
-                    <a href="login.html" class="btn btn-outline-primary login-button">Login</a>
-                </div>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <header class="header">
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+   
+
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="85" height="26" alt="Glowing">
+        </a>
+        <span class="brand-name">eletrix</span>
+        <div class="header-actions">
+
+          <a href="login.html">
+          <button class="header-action-btn" aria-label="user">
+            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+          </button></a>
+
+          <button class="header-action-btn" aria-label="favourite item">
+            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+
+          <button class="header-action-btn" aria-label="cart item">
+        
+
+            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+
         </div>
 
-    </nav>
+        <nav class="navbar">
+          <ul class="navbar-list">
 
-    <!-- Offcanvas para a Sacola -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasShoppingBag"
-        aria-labelledby="offcanvasShoppingBagLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasShoppingBagLabel">sacola</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>itens da sacola</p>
-        </div>
+            <li>
+              <a href="index.html" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="testeprodutos.html" class="navbar-link has-after">Produtos</a>
+            </li>
+
+            <li>
+              <a href="#footer" class="navbar-link has-after">Contato</a>
+            </li>
+
+       
+
+          </ul>
+        </nav>
+
+      </div>
     </div>
 
-    <!-- Offcanvas para o Coração -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasHeart" aria-labelledby="offcanvasHeartLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasHeartLabel">favoritos</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>itens favoritos</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../img/produto.png" alt="Mouse Corsair" class="img-fluid">
-            </div>
-            <div class="col-md-5">
-                <h2 class="mt-4">Mouse Corsair M65</h2>
-                <p class="text-muted">Detalhes adicionais sobre o produto, como características e especificações.</p>
-                <h3 class="mt-3">Preço: R$ 61.<small>98</small> </h3>
-                <a href="#" class="btn btn-primary mt-3">Adicionar ao Carrinho</a>
-            </div>
-        </div>
-    </div>
+  </header>
 
-    <BR></BR>
 
-    <div class="abaixo">
-        <div class="card">
 
-            <div class="imgBox">
-                <img src="../img/produto.png" alt="mouse corsair" class="mouse">
-            </div>
 
-            <div class="contentBox">
-                <h3>Mouse Corsair M65</h3>
-                <h2 class="price">61.<small>98</small> €</h2>
-                <a href="#" class="buy">Buy Now</a>
-            </div>
+  <!--====== NAVBAR ===== -->
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
 
-        </div>
-    </div>
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="179" height="26" alt="eletrix">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="testeprodutos.html" class="navbar-link" data-nav-link>Produtos</a>
+        </li>
+
+        <li>
+          <a href="#footer" class="navbar-link" data-nav-link>Contatos</a>
+        </li>
+
     
+      </ul>
+    </div>
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+<!-- ==== FIM NAVBAR ====== -->
+  <br>
+  <br>
+  <h1 class="infoproduto">Informações do produto</h1>
+  <div class="product-container">
     
-    <div class="abaixo">
-        <div class="card">
+      <div class="product-content">
+          <div class="product-thumbnails">
+              <img src="../img/fone1.png" alt="Thumbnail 1" onclick="changeImage('../img/fone1.png')" class="active">
+              <img src="../img/fone3.png" alt="Thumbnail 2" onclick="changeImage('image_url_2')">
+              <img src="../img/fone4.png" alt="Thumbnail 3" onclick="changeImage('image_url_3')">
+              <img src="../img/fone5.png" alt="Thumbnail 4" onclick="changeImage('image_url_4')">
+          </div>
+          <div class="product-image">
+              <img id="main-product-image" src="../img/fonebranco.png" alt="Black Automatic Watch">
+          </div>
+          <div class="product-purchase">
+            <h4>Somnium pro</h4>
+             <div class="rating">
+                  ⭐ <span>4.3 - 162 reviews</span>
+              </div>
+              <div class="product-price">$169.99 <span class="old-price">$180.00</span></div>
+              <label for="colors">Cores:</label>
+              <div class="color-options">
+                  <span style="background-color: black;" onclick="changeImage('image_url_1')" class="active"></span>
+                  <span style="background-color: red;" onclick="changeImage('image_url_2')"></span>
+                  <span style="background-color: blue;" onclick="changeImage('image_url_3')"></span>
+                  <span style="background-color: green;" onclick="changeImage('image_url_4')"></span>
+              </div>
+              <label for="quantity">Quantidade:</label>
+              <input type="number" id="quantity" value="1" min="1">
+              <button>Adicionar ao carrinho</button>
+             
+          </div>
+      </div>
+      <div class="product-details">
+          <h2>Black Automatic Watch</h2>
+          <p>The St. Louis Mercantile Canoe Company was founded by Alfred Wickett in 1922. Wickett had previously worked for the Old Town Canoe Co. from 1900 to 1914. Manufacturing of the classic wooden canoes in Valley Park, Missouri ceased in 1978.</p>
+          <h3>Fabric + Care</h3>
+          <p>Material: Soft wool blend<br>
+             Color: Various</p>
+          <h3>Sale performance</h3>
+          <p>Sales: 0<br>
+             Review Count: -<br>
+             Review Average: -</p>
+          <div class="keywords">
+              <span># men's fashion</span>
+              <span># men's hat</span>
+              <span># colorful accessory</span>
+              <span># warm headwear</span>
+          </div>
+      </div>
+  </div>
 
-            <div class="imgBox">
-                <img src="../img/produto.png" alt="mouse corsair" class="mouse">
-            </div>
+<br>
+<br>
+<br>
+<br>
 
-            <div class="contentBox">
-                <h3>Mouse Corsair M65</h3>
-                <h2 class="price">61.<small>98</small> €</h2>
-                <a href="#" class="buy">Buy Now</a>
-            </div>
+  
+<!-- <section class="product">
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<div class="controls">
+					<button class="header-action-btn" aria-label="favourite item">
+                        <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+                      </button>
+				</div>
+				<img src="../img/mouse1.png" alt="mouse preto">
+			</div>
+			<div class="photo-album">
+				<ul>
+					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="green apple"></li>
+					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303532/codepen/delicious-apples/half-apple.png" alt="half apple"></li>
+					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303160/codepen/delicious-apples/green-apple-flipped.png" alt="green apple"></li>
+					<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303708/codepen/delicious-apples/apple-top.png" alt="apple top"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1>ShadowStrike</h1>
+			<span>COD: 45999</span>
+		</div>
+		<div class="price">
+			R$ <span>7.93</span>
+		</div>
+		<div class="variant">
+			<h3>SELECT A COLOR</h3>
+			<ul>
+				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="green apple"></li>
+				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302752/codepen/delicious-apples/yellow-apple.png" alt="yellow apple"></li>
+				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302427/codepen/delicious-apples/orange-apple.png" alt="orange apple"></li>
+				<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302285/codepen/delicious-apples/red-apple.png" alt="red apple"></li>
+			</ul>
+		</div>
+		<div class="description">
+			<h3>BENEFITS</h3>
+			<ul>
+				<li>Apples are nutricious</li>
+				<li>Apples may be good for weight loss</li>
+				<li>Apples may be good for bone health</li>
+				<li>They're linked to a lowest risk of diabetes</li>
+			</ul>
+		</div>
+		<button class="buy--btn">ADD TO CART</button>
+	</div>
+</section> -->
 
+<!-- ======= VOLTAR PARA O INICIO ====== -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+  <footer>
+    <div class="container-footer" id="footer">
+      <div class="row-footer">
+
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">devoluções</a></li>
+            <li><a href="#">Status De Pedido</a></li>
+            <li><a href="#">Opções De Pagamento</a></li>
+          </ul>
         </div>
-    </div>
-
-
-
-    <div class="abaixo">
-        <div class="card">
-
-            <div class="imgBox">
-                <img src="../img/produto.png" alt="mouse corsair" class="mouse">
-            </div>
-
-            <div class="contentBox">
-                <h3>Mouse Corsair M65</h3>
-                <h2 class="price">61.<small>98</small> €</h2>
-                <a href="#" class="buy">Buy Now</a>
-            </div>
-
+        <div class="footer-col">
+          <h4>Loja online</h4>
+          <ul>
+            <li><a href="#">Fone</a></li>
+            <li><a href="#">Microfone</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Teclado</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Se subescreva!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+            </form>
+          </div>
+
+          <div class="medias-socias">
+            <a href="#"> <i class="fa fa-facebook"></i> </a>
+            <a href="#"> <i class="fa fa-instagram"></i> </a>
+            <a href="#"> <i class="fa fa-twitter"></i> </a>
+          </div>
+        </div>
+      </div>
     </div>
+  </footer>
+
+ 
+  <script src="../js/swiper-bundle.min.js"></script>
+
+<script src="../js/compras.js"></script>
+<script src="../js/produtos.js"></script>
+  <script src="../js/testeindex.js" defer></script>
 
 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-
-    <script src="../js/produtos.js"></script>
 </body>
 
 </html>

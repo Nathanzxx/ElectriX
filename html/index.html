@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eletrix</title>
 
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-  <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css">
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
           <span class="line line-3"></span>
         </button>
 
-   
+
 
         <a href="#" class="logo">
           <img src="../img/logo.png" width="85" height="26" alt="Glowing">
@@ -38,9 +38,9 @@
         <div class="header-actions">
 
           <a href="login.html">
-          <button class="header-action-btn" aria-label="user">
-            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-          </button></a>
+            <button class="header-action-btn" aria-label="user">
+              <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            </button></a>
 
           <button class="header-action-btn" aria-label="favourite item">
             <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
@@ -48,13 +48,31 @@
             <span class="btn-badge">0</span>
           </button>
 
-          <button class="header-action-btn" aria-label="cart item">
-        
-
+          <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantity="0">
             <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
+            <!-- <span class="btn-badge">0</span> -->
           </button>
+          <div class="cart">
+            <h2 class="cart-title">Carrinho</h2>
+            <div class="cart-content ">
+              <div class="cart-box">
+                <img src="../img/fone1.png" alt="" class="cart-img">
+                <div class="detail-box">
+                  <div class="cart-product-title">Produto</div>
+                  <div class="cart-price">R$52</div>
+                  <input type="number" name="" id="" value="1" class="cart-quantity">
+                </div>
+                <ion-icon name="trash" class="cart-remove"></ion-icon>
+              </div>
+            </div>
+            <div class="total">
+              <total class="total-title">Total</total>
+              <total class="total-price">R$0</total>
+            </div>
+            <button type="button" class="btn-buy">Pagar agora</button>
+            <ion-icon name="close" id="close-cart"></ion-icon>
+
+          </div>
 
         </div>
 
@@ -66,15 +84,12 @@
             </li>
 
             <li>
-              <a href="testeprodutos.html" class="navbar-link has-after">Produtos</a>
+              <a href="index.html" class="navbar-link has-after">Produtos</a>
             </li>
 
             <li>
               <a href="#footer" class="navbar-link has-after">Contato</a>
             </li>
-
-       
-
           </ul>
         </nav>
 
@@ -107,30 +122,165 @@
         </li>
 
         <li>
-          <a href="testeprodutos.html" class="navbar-link" data-nav-link>Produtos</a>
+          <a href="produtos.html" class="navbar-link" data-nav-link>Produtos</a>
         </li>
 
         <li>
           <a href="#footer" class="navbar-link" data-nav-link>Contatos</a>
         </li>
 
-    
+
       </ul>
     </div>
     <div class="overlay" data-nav-toggler data-overlay></div>
   </div>
+  <!-- ==== FIM NAVBAR ====== -->
 
-  <section class="parallax" id="section1"></section>
-    <section class="content">
-        <h2>SOMNIUM PRO</h2>
-    </section>
-    <section class="parallax" id="section2"></section>
-    <section class="content">
-        <h2>SOMNIUM PRO</h2>
-    </section>
-    <section class="parallax" id="section3"></section>
-  
-<!-- ======= VOLTAR PARA O INICIO ====== -->
+  <section class="home">
+    <div class="home__container container">
+      <div class="home__data">
+
+        <h1 class="home__title">SOMNIUM PRO</h1>
+
+        <p class="home__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+          similique vitae, aperiam provident deserunt in! Illum, nisi nobis magni distinctio architecto
+          sint temporibus perferendis doloremque.</p>
+
+        <a href="#" class="home__button">Compre agora</a>
+      </div>
+      <div class="home__images">
+        <div class="home__circle"></div>
+        <div class="home__swiper swiper swiper-large">
+          <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+              <article class="home__article swiper-slide">
+                <img src="../img/produto.png" alt="imagem" class="home__fone">
+              </article>
+              <article class="home__article swiper-slide">
+                <img src="../img/produto2.png" alt="imagem" class="home__fone">
+              </article>
+              <article class="home__article swiper-slide">
+                <img src="../img/produto3.png" alt="imagem" class="home__fone">
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <br>
+  <!-- ===== FIM DO SWIPER ===== -->
+
+  <!-- ==== COLEÇAO ===== -->
+  <section class="section collection" id="collection" aria-label="collection" data-section>
+    <div class="container">
+
+      <ul class="collection-list">
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Teclados</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#teclado" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/2.png')"></div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Mouse</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#mouse" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+            <div class="has-bg-image" style="background-image: url('../img/3.png')"></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Fones</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#fone" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/fones.png')"></div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Mouse</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-mouse">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="mouse">
+    <div class="card-container lado" id="mouseContainer"></div>
+  </div>
+
+  </div>
+  <br>
+  <br>
+
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Teclados</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-teclados">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="teclado">
+    <div class="card-container lado" id="tecladoContainer"></div>
+  </div>
+  <br>
+  <br>
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Fones</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-headset">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="fone">
+    <div class="card-container lado" id="headsetContainer"></div>
+  </div>
+
+
+
+
+  <!-- ======= VOLTAR PARA O INICIO ====== -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
   </a>
@@ -177,11 +327,12 @@
     </div>
   </footer>
 
- 
+
   <script src="../js/swiper-bundle.min.js"></script>
 
- 
+  <script src="../js/produtos.js"></script>
   <script src="../js/testeindex.js" defer></script>
+  <script src="../js/carrinho.js"></script>
 
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
