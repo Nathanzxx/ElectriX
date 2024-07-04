@@ -46,7 +46,7 @@ const cardsData = [
         altText: "Teclado Logitech G Pro",
         price: "89.99",
         currency: "€",
-        link: "#",
+        link: "compra2.html",
         category: "Teclado"
     },
     {
@@ -99,7 +99,7 @@ const cardsData = [
         category: "Headset"
     },
     {
-        imgSrc: "../img/fone4.png",
+        imgSrc: "../img/fone12.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
         currency: "€",

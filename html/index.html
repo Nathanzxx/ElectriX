@@ -45,19 +45,22 @@
               <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
               <!-- <span class="btn-badge" id="cart-counter">0</span>  -->
             </button>
-          <div class="cart">
-            <h2 class="cart-title">Carrinho</h2>
-            <div class="cart-content">
-                <!-- Itens do carrinho serão populados dinamicamente pelo JavaScript -->
-            </div>
-            <div class="total">
+            
+            <div class="cart">
+              <h2 class="cart-title">Carrinho</h2>
+              <div class="cart-content">
+                
+              </div>
+              <div class="total">
                 <total class="total-title">Total</total>
                 <total class="total-price">R$0</total>
+              </div>
+              <button type="button" class="btn-buy" id="checkout-btn" onclick="redirecionarParaPagamento()">Pagar agora</button>
+              <button class="close-btn" id="close-cart">&times;</button>
+              
             </div>
-            <button type="button" class="btn-buy" id="checkout-btn">Pagar agora</button>
-            <button class="close-btn" id="close-cart">&times;</button>
-          
-        </div>
+          </div>
+  
 
         <nav class="navbar">
           <ul class="navbar-list">

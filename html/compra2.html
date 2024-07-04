@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe produtos</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/compras.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
+</head>
+
+<body id="top">
+
+  <header class="header">
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+
+
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="85" height="26" alt="Glowing">
+        </a>
+        <span class="brand-name">eletrix</span>
+        <div class="header-actions">
+          <a href="login.html">
+            <button class="header-action-btn" aria-label="user">
+              <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            </button></a>
+
+          <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
+            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            <!-- <span class="btn-badge" id="cart-counter">0</span>  -->
+          </button>
+          <div class="cart">
+            <h2 class="cart-title">Carrinho</h2>
+            <div class="cart-content">
+              
+            </div>
+            <div class="total">
+              <total class="total-title">Total</total>
+              <total class="total-price">R$0</total>
+            </div>
+            <button type="button" class="btn-buy" id="checkout-btn" onclick="redirecionarParaPagamento()">Pagar agora</button>
+            <button class="close-btn" id="close-cart">&times;</button>
+          </div>
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="index.html" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="#collection" class="navbar-link has-after">Produtos</a>
+            </li>
+
+            <li>
+              <a href="contato.html" class="navbar-link has-after">Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <!--====== NAVBAR ===== -->
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="179" height="26" alt="eletrix">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#collection" class="navbar-link" data-nav-link>Produtos</a>
+        </li>
+
+        <li>
+          <a href="contato.html" class="navbar-link" data-nav-link>Contatos</a>
+        </li>
+
+    
+      </ul>
+    </div>
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+<!-- ==== FIM NAVBAR ====== -->
+  <br>
+  <br>
+  <h1 class="infoproduto">Informações do produto</h1>
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-thumbnails">
+                <img src="../img/teclado1.png" alt="Thumbnail 1" onclick="changeImage('../img/teclado1.png')" >
+                <img src="../img/teclado2.png" alt="Thumbnail 2" onclick="changeImage('../img/teclado2.png')">
+                <img src="../img/teclado3.png" alt="Thumbnail 3" onclick="changeImage('../img/teclado3.png')">
+            </div>
+            <div class="product-image">
+                <img id="main-product-image" src="../img/teclado1.png" alt="Black Automatic Watch">
+            </div>
+            <div class="product-purchase">
+                <h4 class="product-title">TECLADO X</h4>
+                <div class="rating">
+                    ⭐ <span>4.3 - 162 reviews</span>
+                </div>
+                <div class="product-price">$325</div>
+                <!-- <label for="colors">Cores:</label> -->
+                <!-- <div class="color-options">
+                    <span style="background-color: black;" onclick="changeImage('../img/fone1.png')" class="active"></span>
+                    <span style="background-color: red;" onclick="changeImage('../img/fone3.png')"></span>
+                    <span style="background-color: blue;" onclick="changeImage('../img/fone4.png')"></span>
+                    <span style="background-color: green;" onclick="changeImage('../img/fone5.png')"></span>
+                </div> -->
+                <button class="add-cart">Adicionar ao carrinho</button>
+                <div class="cart-content">
+                    <!-- Carrinho vai ser populado dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>Black Automatic Watch</h2>
+            <p>The St. Louis Mercantile Canoe Company was founded by Alfred Wickett in 1922. Wickett had previously worked for the Old Town Canoe Co. from 1900 to 1914. Manufacturing of the classic wooden canoes in Valley Park, Missouri ceased in 1978.</p>
+            <h3>Fabric + Care</h3>
+            <p>Material: Soft wool blend<br>
+            Color: Various</p>
+            <h3>Sale performance</h3>
+            <p>Sales: 0<br>
+            Review Count: -<br>
+            Review Average: -</p>
+            <div class="keywords">
+                <span># men's fashion</span>
+                <span># men's hat</span>
+                <span># colorful accessory</span>
+                <span># warm headwear</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h2>Produtos Recomendados</h2>
+<div class="recommended-products">
+    <div class="product-card">
+        <img src="../img/teclado1.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+    </div>
+    <div class="product-card">
+        <img src="../img/teclado2.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+    </div>
+    <div class="product-card">
+        <img src="../img/teclado3.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+    </div>
+    <div class="product-card">
+        <img src="../img/fone5.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+    </div>
+    <div class="product-card">
+      <img src="../img/fone5.png" alt="Black Automatic Watch">
+      <h3>Black Automatic Watch</h3>
+      <p>Accessories</p>
+      <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+      <div class="rating">⭐ 4.8 (98)</div>
+  </div>
+  <div class="product-card">
+    <img src="../img/fone5.png" alt="Black Automatic Watch">
+    <h3>Black Automatic Watch</h3>
+    <p>Accessories</p>
+    <p class="price">$169.99 <span class="old-price">$199.99</span></p>
+    <div class="rating">⭐ 4.8 (98)</div>
+</div>
+</div>
+
+<br>
+<br>
+<!-- ======= VOLTAR PARA O INICIO ====== -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+  <footer>
+    <div class="container-footer" id="footer">
+      <div class="row-footer">
+
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">devoluções</a></li>
+            <li><a href="#">Status De Pedido</a></li>
+            <li><a href="#">Opções De Pagamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Loja online</h4>
+          <ul>
+            <li><a href="#">Fone</a></li>
+            <li><a href="#">Microfone</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Teclado</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Se subescreva!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+            </form>
+          </div>
+
+          <div class="medias-socias">
+            <a href="#"> <i class="fa fa-facebook"></i> </a>
+            <a href="#"> <i class="fa fa-instagram"></i> </a>
+            <a href="#"> <i class="fa fa-twitter"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script src="../js/swiper-bundle.min.js"></script>
+
+<script src="../js/compras.js"></script>
+<script src="../js/produtos.js"></script>
+  <script src="../js/testeindex.js" defer></script>
+  <script src="../js/carrinho.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
