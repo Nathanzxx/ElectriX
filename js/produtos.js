@@ -1,59 +1,59 @@
 const cardsData = [
     {
         imgSrc: "../img/mouse1.png",
-        altText: "Mouse Corsair M65",
-        price: "61.98",
-        currency: "€",
+        altText: "Delux ",
+        price: "R$ 149,99",
+        currency: "",
         link: "compra1.html",
         category: "Mouse"
     },
     {
         id: 2,
         imgSrc: "../img/mouse2.png",
-        altText: "Mouse Gamer RGB",
-        price: "79.99",
-        currency: "€",
+        altText: "Delux Pro",
+        price: "R$ 170,99",
+        currency: "",
         link: "#",
         category: "Mouse"
     },
     {
         imgSrc: "../img/mouse4.png",
-        altText: "Mouse Gamer RGB",
-        price: "79.99",
-        currency: "€",
+        altText: "G pro",
+        price: "R$ 250,99",
+        currency: "",
         link: "#",
         category: "Mouse"
     },
     {
         imgSrc: "../img/mouse5.png",
-        altText: "Mouse Gamer RGB",
-        price: "79.99",
-        currency: "€",
+        altText: "VXE R1",
+        price: "R$ 132,99",
+        currency: "",
         link: "#",
         category: "Mouse"
     },
     {
         imgSrc: "../img/mouse3.png",
-        altText: "Mouse Logitech G Pro",
-        price: "89.99",
-        currency: "€",
+        altText: "VXE R1    Pro",
+        price: "R$ 169,99",
+        currency: "",
         link: "#",
         category: "Mouse"
     },
     // mouses //
     {
         imgSrc: "../img/teclado1.png",
-        altText: "Teclado Logitech G Pro",
-        price: "89.99",
-        currency: "€",
+        altText: "Maxfit 67",
+        price: "R$ 200,90",
+        currency: "",
         link: "compra2.html",
         category: "Teclado"
     },
     {
         imgSrc: "../img/teclado2.png",
-        altText: "Teclado Logitech G Pro",
-        price: "89.99",
-        currency: "€",
+        altText: "Maxfit 67 Pro",
+        price: "R$ 150,99",
+        currency: "",
         link: "#",
         category: "Teclado"
     },
@@ -61,7 +61,7 @@ const cardsData = [
         imgSrc: "../img/teclado3.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Teclado"
     },
@@ -69,7 +69,7 @@ const cardsData = [
         imgSrc: "../img/teclado4.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Teclado"
     },
@@ -77,7 +77,7 @@ const cardsData = [
         imgSrc: "../img/teclado5.png",
         altText: "Teclado Logitech G Pro",
         price: "89.99",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Teclado"
     },
@@ -86,7 +86,7 @@ const cardsData = [
         imgSrc: "../img/fone1.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Headset"
     },
@@ -94,7 +94,7 @@ const cardsData = [
         imgSrc: "../img/fone3.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Headset"
     },
@@ -102,7 +102,7 @@ const cardsData = [
         imgSrc: "../img/fone12.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Headset"
     },
@@ -110,7 +110,7 @@ const cardsData = [
         imgSrc: "../img/fone5.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Headset"
     },
@@ -118,7 +118,7 @@ const cardsData = [
         imgSrc: "../img/produto3.png",
         altText: "Headset HyperX Cloud II",
         price: "99.95",
-        currency: "€",
+        currency: "",
         link: "#",
         category: "Headset"
     },
@@ -165,28 +165,28 @@ cardsData.forEach(card => {
     }
 });
 
-document.getElementById('arrow-right-mouse').addEventListener('click', function(event) {
+document.getElementById('arrow-right-mouse').addEventListener('click', function (event) {
     event.preventDefault();
     scrollCards('mouseContainer');
-  });
-  
-  document.getElementById('arrow-right-teclados').addEventListener('click', function(event) {
+});
+
+document.getElementById('arrow-right-teclados').addEventListener('click', function (event) {
     event.preventDefault();
     scrollCards('tecladoContainer');
-  });
-  
-  document.getElementById('arrow-right-headset').addEventListener('click', function(event) {
+});
+
+document.getElementById('arrow-right-headset').addEventListener('click', function (event) {
     event.preventDefault();
     scrollCards('headsetContainer');
-  });
-  
-  function scrollCards(containerId) {
+});
+
+function scrollCards(containerId) {
     const cardContainer = document.getElementById(containerId);
     const cardWidth = cardContainer.querySelector('.card').offsetWidth;
     const scrollAmount = cardWidth + 20; // 20px é a margem do card (ajuste conforme necessário)
-    
+
     cardContainer.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
+        left: scrollAmount,
+        behavior: 'smooth'
     });
-  }
+}
