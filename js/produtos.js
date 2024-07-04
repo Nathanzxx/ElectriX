@@ -4,7 +4,7 @@ const cardsData = [
         altText: "Delux ",
         price: "R$ 149,99",
         currency: "",
-        link: "compra1.html",
+        link: "compraMouse1.html",
         category: "Mouse"
     },
     {
@@ -13,7 +13,23 @@ const cardsData = [
         altText: "Delux Pro",
         price: "R$ 170,99",
         currency: "",
-        link: "#",
+        link: "compraMouse2.html",
+        category: "Mouse"
+    },
+    {
+        imgSrc: "../img/mouse3.png",
+        altText: "VXE R1",
+        price: "R$ 132,90",
+        currency: "",
+        link: "compraMouse3.html",
+        category: "Mouse"
+    },
+    {
+        imgSrc: "../img/mouse5.png",
+        altText: "VXE R1 Pro",
+        price: "R$ 186,99",
+        currency: "",
+        link: "compraMouse4.html",
         category: "Mouse"
     },
     {
@@ -21,23 +37,7 @@ const cardsData = [
         altText: "G pro",
         price: "R$ 250,99",
         currency: "",
-        link: "#",
-        category: "Mouse"
-    },
-    {
-        imgSrc: "../img/mouse5.png",
-        altText: "VXE R1",
-        price: "R$ 132,99",
-        currency: "",
-        link: "#",
-        category: "Mouse"
-    },
-    {
-        imgSrc: "../img/mouse3.png",
-        altText: "VXE R1    Pro",
-        price: "R$ 169,99",
-        currency: "",
-        link: "#",
+        link: "compraMouse5.html",
         category: "Mouse"
     },
     // mouses //
@@ -46,80 +46,80 @@ const cardsData = [
         altText: "Maxfit 67",
         price: "R$ 200,90",
         currency: "",
-        link: "compra2.html",
+        link: "compraTeclado1.html",
         category: "Teclado"
     },
     {
         imgSrc: "../img/teclado2.png",
         altText: "Maxfit 67 Pro",
-        price: "R$ 150,99",
+        price: "R$ 250,99",
         currency: "",
-        link: "#",
+        link: "compraTeclado2.html",
         category: "Teclado"
     },
     {
-        imgSrc: "../img/teclado3.png",
-        altText: "Teclado Logitech G Pro",
-        price: "89.99",
+        imgSrc: "../img/ATK68.png",
+        altText: "Sionyx V1",
+        price: "R$ 90,99",
         currency: "",
-        link: "#",
+        link: "#compraTeclado3.html",
         category: "Teclado"
     },
     {
-        imgSrc: "../img/teclado4.png",
-        altText: "Teclado Logitech G Pro",
-        price: "89.99",
+        imgSrc: "../img/Wotting.png",
+        altText: "Sionyx V2",
+        price: "R$ 120,99",
         currency: "",
-        link: "#",
+        link: "comprateclado4.html",
         category: "Teclado"
     },
     {
         imgSrc: "../img/teclado5.png",
-        altText: "Teclado Logitech G Pro",
-        price: "89.99",
+        altText: "Mucai 61",
+        price: "R$ 137,99",
         currency: "",
-        link: "#",
+        link: "compraTeclado5 ",
         category: "Teclado"
     },
     // teclados //
     {
         imgSrc: "../img/fone1.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
+        altText: "zuia flight",
+        price: "R$ 125.95",
         currency: "",
-        link: "#",
+        link: "compraFone1.html",
         category: "Headset"
     },
     {
         imgSrc: "../img/fone3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
+        altText: "factus ultra",
+        price: "R$ 180.90",
         currency: "",
-        link: "#",
+        link: "compraFone2.html",
         category: "Headset"
     },
     {
         imgSrc: "../img/fone12.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
+        altText: "R$ kinsei azure",
+        price: "R$ 250.99",
         currency: "",
-        link: "#",
+        link: "compraFone3.html",
         category: "Headset"
     },
     {
         imgSrc: "../img/fone5.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
+        altText: "cozeroi ultima",
+        price: "R$ 174.95",
         currency: "",
-        link: "#",
+        link: "compraFone4.html",
         category: "Headset"
     },
     {
         imgSrc: "../img/produto3.png",
-        altText: "Headset HyperX Cloud II",
-        price: "99.95",
+        altText: "venturus V2",
+        price: "R$ 220.90",
         currency: "",
-        link: "#",
+        link: "compraFone5.html",
         category: "Headset"
     },
     // headsets //

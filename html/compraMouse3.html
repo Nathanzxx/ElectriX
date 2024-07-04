@@ -5,23 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eletrix</title>
+  <title>Detalhe produtos</title>
 
-  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-xjLxvs4oBoCRrt3nI/+Hzn6Qb/zrtJKoSOi+ZvC9s4RocFG2wzP5R5EmqMlIyZ+4HTyB7zOQEBqX4B3Z6D5Egw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="https://kit.fontawesome.com/23f3597bca.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/compras.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
 </head>
 
 <body id="top">
+
   <header class="header">
     <div class="header-top" data-header>
       <div class="container">
@@ -43,11 +40,11 @@
             <button class="header-action-btn" aria-label="user">
               <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
             </button></a>
+
           <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
             <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
             <!-- <span class="btn-badge" id="cart-counter">0</span>  -->
           </button>
-
           <div class="cart">
             <h2 class="cart-title">Carrinho</h2>
             <div class="cart-content">
@@ -60,10 +57,8 @@
             <button type="button" class="btn-buy" id="checkout-btn" onclick="redirecionarParaPagamento()">Pagar
               agora</button>
             <button class="close-btn" id="close-cart">&times;</button>
-
           </div>
         </div>
-
 
         <nav class="navbar">
           <ul class="navbar-list">
@@ -86,6 +81,7 @@
     </div>
 
   </header>
+
 
 
 
@@ -124,158 +120,105 @@
     <div class="overlay" data-nav-toggler data-overlay></div>
   </div>
   <!-- ==== FIM NAVBAR ====== -->
-
-  <section class="home">
-    <div class="home__container container">
-      <div class="home__data">
-
-        <h1 class="home__title">SOMNIUM PRO</h1>
-
-        <p class="home__description">Apresentamos o Sonmnium Pro, o mais novo lançamento da nossa empresa. Desenvolvido
-          para oferecer qualidade, conforto e estilo, o Sonmnium Pro é a escolha ideal para gamers, profissionais e
-          entusiastas de áudio.</p>
-
-        <a href="compra1.html" class="home__button">Compre agora</a>
+  <br>
+  <br>
+  <h1 class="infoproduto">Informações do produto</h1>
+  <div class="product-container">
+    <div class="product-content">
+      <div class="product-thumbnails">
+        <img src="../img/mouse3.png" alt="Thumbnail 1" onclick="changeImage('../img/mouse3.png')">
+        <img src="../img/mouse5.png" alt="Thumbnail 2" onclick="changeImage('../img/mouse5.png')">
       </div>
-      <div class="home__images">
-        <div class="home__circle"></div>
-        <div class="home__swiper swiper swiper-large">
-          <div class="home__swiper swiper">
-            <div class="swiper-wrapper">
-              <article class="home__article swiper-slide">
-                <img src="../img/produto.png" alt="imagem" class="home__fone">
-              </article>
-              <article class="home__article swiper-slide">
-                <img src="../img/produto2.png" alt="imagem" class="home__fone">
-              </article>
-              <article class="home__article swiper-slide">
-                <img src="../img/produto3.png" alt="imagem" class="home__fone">
-              </article>
-            </div>
-          </div>
-
-          <div class="swiper-pagination"></div>
+      <div class="product-image">
+        <img id="main-product-image" src="../img/mouse3.png" alt="Black Automatic Watch">
+      </div>
+      <div class="product-purchase">
+        <h4 class="product-title">SOMNIUM PRO</h4>
+        <div class="rating">
+          ⭐ <span>4.3 - 162 Avaliações</span>
+        </div>
+        <div class="product-price">R$: 132.99</div>
+        <!-- <label for="colors">Cores:</label> -->
+        <!-- <div class="color-options">
+                    <span style="background-color: black;" onclick="changeImage('../img/fone1.png')" class="active"></span>
+                    <span style="background-color: red;" onclick="changeImage('../img/fone3.png')"></span>
+                    <span style="background-color: blue;" onclick="changeImage('../img/fone4.png')"></span>
+                    <span style="background-color: green;" onclick="changeImage('../img/fone5.png')"></span>
+                </div> -->
+        <button class="add-cart">Adicionar ao carrinho</button>
+        <div class="cart-content">
+          <!-- Carrinho vai ser populado dinamicamente pelo JavaScript -->
         </div>
       </div>
-  </section>
-  <br>
-  <br>
-  <!-- ===== FIM DO SWIPER ===== -->
-
-  <!-- ==== COLEÇAO ===== -->
-  <section class="section collection" id="collection" aria-label="collection" data-section>
-    <div class="container">
-
-      <ul class="collection-list">
-
-        <li>
-          <div class="collection-card has-before hover:shine">
-
-            <h2 class="h2 card-title">Teclados</h2>
-
-            <p class="card-text"></p>
-
-            <a href="#teclado" class="btn-link">
-              <span class="span">Ver mais</span>
-
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-            </a>
-
-            <div class="has-bg-image" style="background-image: url('../img/2.png')"></div>
-
-          </div>
-        </li>
-
-        <li>
-          <div class="collection-card has-before hover:shine">
-
-            <h2 class="h2 card-title">Mouse</h2>
-
-            <p class="card-text"></p>
-
-            <a href="#mouse" class="btn-link">
-              <span class="span">Ver mais</span>
-
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-            </a>
-            <div class="has-bg-image" style="background-image: url('../img/3.png')"></div>
-          </div>
-        </li>
-
-        <li>
-          <div class="collection-card has-before hover:shine">
-
-            <h2 class="h2 card-title">Fones</h2>
-
-            <p class="card-text"></p>
-
-            <a href="#fone" class="btn-link">
-              <span class="span">Ver mais</span>
-
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-            </a>
-
-            <div class="has-bg-image" style="background-image: url('../img/fones.png')"></div>
-
-          </div>
-        </li>
-      </ul>
     </div>
-  </section>
-  <div class="title-wrapper">
-    <h2 class="h2 section-title">Mouse</h2>
+    <div class="product-details">
+      <h2>SOMNIUM PRO</h2>
+      <p>Este headset premium combina design elegante com tecnologia de ponta para oferecer uma experiência sonora
+        imersiva como nunca antes.</p>
+      <h3>Qualidade de Som Superior</h3>
+      <p>Drivers de alta resolução proporcionam áudio nítido e detalhado em cada frequência.<br>
+        Cores: Preto, rosa e beje</p>
+      <h3>Tecnologia Avançada de Cancelamento de Ruído</h3>
 
-    <a href="#" class="btn-link" id="arrow-right-mouse">
-      <span class="span">Ver mais</span>
 
-      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-    </a>
-  </div>
-  <div class="category" id="mouse">
-    <div class="card-container lado" id="mouseContainer"></div>
-  </div>
-
+    </div>
   </div>
   <br>
   <br>
+  <br>
+  <h2 class="lado2"><b>Produtos Relacionados :</b></h2>
+  <div class="recommended-products">
+    <div class="product-card">
+      <a href="compraMouse1.html">
+        <img src="../img/mouse1.png" alt="Black Automatic Watch">
+      </a>
+      <h3>Black Automatic Watch</h3>
+      <p>Accessories</p>
+      <p class="price">R$: 169.99 <span class="old-price">$199.99</span></p>
+      <div class="rating">⭐ 4.8 (98)</div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="compraMouse2.html">
+        <img src="../img/mouse2.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">R$: 169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="compraMouse3.html">
+        <img src="../img/mouse3.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">R$: 169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="compraMouse5.html">
+        <img src="../img/mouse4.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">R$: 169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="compraMouse4.html">
+        <img src="../img/mouse5.png" alt="Black Automatic Watch">
+        <h3>Black Automatic Watch</h3>
+        <p>Accessories</p>
+        <p class="price">R$: 169.99 <span class="old-price">$199.99</span></p>
+        <div class="rating">⭐ 4.8 (98)</div>
+      </a>
+    </div>
 
-  <div class="title-wrapper">
-    <h2 class="h2 section-title">Teclados</h2>
-
-    <a href="#" class="btn-link" id="arrow-right-teclados">
-      <span class="span">Ver mais</span>
-
-      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-    </a>
   </div>
-  <div class="category" id="teclado">
-    <div class="card-container lado" id="tecladoContainer"></div>
-  </div>
-  <br>
-  <br>
-  <div class="title-wrapper">
-    <h2 class="h2 section-title">Fones</h2>
-
-    <a href="#" class="btn-link" id="arrow-right-headset">
-      <span class="span">Ver mais</span>
-
-      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-    </a>
-  </div>
-  <div class="category" id="fone">
-    <div class="card-container lado" id="headsetContainer"></div>
-  </div>
 
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-
   <!-- ======= VOLTAR PARA O INICIO ====== -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
@@ -327,6 +270,7 @@
 
   <script src="../js/swiper-bundle.min.js"></script>
 
+  <script src="../js/compras.js"></script>
   <script src="../js/produtos.js"></script>
   <script src="../js/testeindex.js" defer></script>
   <script src="../js/carrinho.js"></script>
