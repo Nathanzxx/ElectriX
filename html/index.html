@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eletrix</title>
+
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-xjLxvs4oBoCRrt3nI/+Hzn6Qb/zrtJKoSOi+ZvC9s4RocFG2wzP5R5EmqMlIyZ+4HTyB7zOQEBqX4B3Z6D5Egw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
+</head>
+
+<body id="top">
+  <header class="header">
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+
+
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="85" height="26" alt="Glowing">
+        </a>
+        <span class="brand-name">eletrix</span>
+        <div class="header-actions">
+          <a href="login.html">
+            <button class="header-action-btn" aria-label="user">
+              <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            </button></a>
+          <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
+            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            <!-- <span class="btn-badge" id="cart-counter">0</span>  -->
+          </button>
+
+          <div class="cart">
+            <h2 class="cart-title">Carrinho</h2>
+            <div class="cart-content">
+
+            </div>
+            <div class="total">
+              <total class="total-title">Total</total>
+              <total class="total-price">R$0</total>
+            </div>
+            <button type="button" class="btn-buy" id="checkout-btn" onclick="redirecionarParaPagamento()">Pagar
+              agora</button>
+            <button class="close-btn" id="close-cart">&times;</button>
+
+          </div>
+        </div>
+
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="index.html" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="#collection" class="navbar-link has-after">Produtos</a>
+            </li>
+
+            <li>
+              <a href="contato.html" class="navbar-link has-after">Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <!--====== NAVBAR ===== -->
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="../img/logo.png" width="179" height="26" alt="eletrix">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#collection" class="navbar-link" data-nav-link>Produtos</a>
+        </li>
+
+        <li>
+          <a href="contato.html" class="navbar-link" data-nav-link>Contatos</a>
+        </li>
+
+
+      </ul>
+    </div>
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+  <!-- ==== FIM NAVBAR ====== -->
+
+  <section class="home">
+    <div class="home__container container">
+      <div class="home__data">
+
+        <h1 class="home__title">SOMNIUM PRO</h1>
+
+        <p class="home__description">Apresentamos o Sonmnium Pro, o mais novo lançamento da nossa empresa. Desenvolvido
+          para oferecer qualidade, conforto e estilo, o Sonmnium Pro é a escolha ideal para gamers, profissionais e
+          entusiastas de áudio.</p>
+
+        <a href="compra1.html" class="home__button">Compre agora</a>
+      </div>
+      <div class="home__images">
+        <div class="home__circle"></div>
+        <div class="home__swiper swiper swiper-large">
+          <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+              <article class="home__article swiper-slide">
+                <img src="../img/produto.png" alt="imagem" class="home__fone">
+              </article>
+              <article class="home__article swiper-slide">
+                <img src="../img/produto2.png" alt="imagem" class="home__fone">
+              </article>
+              <article class="home__article swiper-slide">
+                <img src="../img/produto3.png" alt="imagem" class="home__fone">
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <br>
+  <!-- ===== FIM DO SWIPER ===== -->
+
+  <!-- ==== COLEÇAO ===== -->
+  <section class="section collection" id="collection" aria-label="collection" data-section>
+    <div class="container">
+
+      <ul class="collection-list">
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Teclados</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#teclado" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/2.png')"></div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Mouse</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#mouse" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+            <div class="has-bg-image" style="background-image: url('../img/3.png')"></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="collection-card has-before hover:shine">
+
+            <h2 class="h2 card-title">Fones</h2>
+
+            <p class="card-text"></p>
+
+            <a href="#fone" class="btn-link">
+              <span class="span">Ver mais</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+            <div class="has-bg-image" style="background-image: url('../img/fones.png')"></div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Mouse</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-mouse">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="mouse">
+    <div class="card-container lado" id="mouseContainer"></div>
+  </div>
+
+  </div>
+  <br>
+  <br>
+
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Teclados</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-teclados">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="teclado">
+    <div class="card-container lado" id="tecladoContainer"></div>
+  </div>
+  <br>
+  <br>
+  <div class="title-wrapper">
+    <h2 class="h2 section-title">Fones</h2>
+
+    <a href="#" class="btn-link" id="arrow-right-headset">
+      <span class="span">Ver mais</span>
+
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+  <div class="category" id="fone">
+    <div class="card-container lado" id="headsetContainer"></div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- ======= VOLTAR PARA O INICIO ====== -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+  <footer>
+    <div class="container-footer" id="footer">
+      <div class="row-footer">
+
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">devoluções</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Loja online</h4>
+          <ul>
+            <li><a href="#">Fone</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Teclado</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Se subescreva!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>subscrever</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../js/swiper-bundle.min.js"></script>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/testeindex.js" defer></script>
+  <script src="../js/carrinho.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
