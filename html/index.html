@@ -9,8 +9,7 @@
 
   <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xjLxvs4oBoCRrt3nI/+Hzn6Qb/zrtJKoSOi+ZvC9s4RocFG2wzP5R5EmqMlIyZ+4HTyB7zOQEBqX4B3Z6D5Egw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,17 +41,10 @@
             <button class="header-action-btn" aria-label="user">
               <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
             </button></a>
-
-          <!-- <button class="header-action-btn" aria-label="favourite item">
-            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button> -->
-
-          <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
-            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-            <!-- <span class="btn-badge">0</span>  -->
-          </button>
+            <button class="header-action-btn" aria-label="cart item" id="cart-icon" data-quantitiy="0">
+              <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+              <!-- <span class="btn-badge" id="cart-counter">0</span>  -->
+            </button>
           <div class="cart">
             <h2 class="cart-title">Carrinho</h2>
             <div class="cart-content">
@@ -62,7 +54,7 @@
                 <total class="total-title">Total</total>
                 <total class="total-price">R$0</total>
             </div>
-            <button type="button" class="btn-buy">Pagar agora</button>
+            <button type="button" class="btn-buy" id="checkout-btn">Pagar agora</button>
             <button class="close-btn" id="close-cart">&times;</button>
           
         </div>
@@ -79,7 +71,7 @@
             </li>
 
             <li>
-              <a href="#footer" class="navbar-link has-after">Contato</a>
+              <a href="contato.html" class="navbar-link has-after">Contato</a>
             </li>
           </ul>
         </nav>
@@ -117,7 +109,7 @@
         </li>
 
         <li>
-          <a href="#footer" class="navbar-link" data-nav-link>Contatos</a>
+          <a href="contato.html" class="navbar-link" data-nav-link>Contatos</a>
         </li>
 
 
@@ -133,11 +125,9 @@
 
         <h1 class="home__title">SOMNIUM PRO</h1>
 
-        <p class="home__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-          similique vitae, aperiam provident deserunt in! Illum, nisi nobis magni distinctio architecto
-          sint temporibus perferendis doloremque.</p>
+        <p class="home__description">Apresentamos o Sonmnium Pro, o mais novo lançamento da nossa empresa. Desenvolvido para oferecer qualidade, conforto e estilo, o Sonmnium Pro é a escolha ideal para gamers, profissionais e entusiastas de áudio.</p>
 
-        <a href="#" class="home__button">Compre agora</a>
+        <a href="compra1.html" class="home__button">Compre agora</a>
       </div>
       <div class="home__images">
         <div class="home__circle"></div>
@@ -282,18 +272,15 @@
         <div class="footer-col">
           <h4>Obter ajuda</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
             <li><a href="#">Transporte</a></li>
             <li><a href="#">devoluções</a></li>
-            <li><a href="#">Status De Pedido</a></li>
-            <li><a href="#">Opções De Pagamento</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Loja online</h4>
           <ul>
             <li><a href="#">Fone</a></li>
-            <li><a href="#">Microfone</a></li>
             <li><a href="#">Mouse</a></li>
             <li><a href="#">Teclado</a></li>
           </ul>
@@ -306,12 +293,6 @@
               <input type="email" placeholder="Digite o seu e-mail" required>
               <button>subscrever</button>
             </form>
-          </div>
-
-          <div class="medias-socias">
-            <a href="#"> <i class="fa fa-facebook"></i> </a>
-            <a href="#"> <i class="fa fa-instagram"></i> </a>
-            <a href="#"> <i class="fa fa-twitter"></i> </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/pagamentos.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="left-column">
+            <div class="personal-info">
+                <h2>Informações pessoais</h2>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Número de telefone">
+            </div>
+            <div class="shipping-address">
+                <h2>Endereço</h2>
+                <input type="text" id="cep" placeholder="CEP">
+                <input type="text" id="address" placeholder="Endereço">
+                <input type="text" placeholder="Número">
+                <input type="text" id="state" placeholder="Estado">
+                <input type="text" id="city" placeholder="Cidade">
+            </div>
+            <div class="payment-methods">
+                <h2>Métodos de pagamento</h2>
+                <label>
+                    <input type="radio" name="payment" value="credit-debit"> Crédito ou Debito
+                </label> <br>
+                <input type="text" placeholder="Nome do cartão">
+                <input type="text" placeholder="Número do cartão">
+                <div class="card-details">
+                    <input type="text" placeholder="Data de válidade">
+                    <input type="text" placeholder="Código de segurança">
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="item-summary">
+                <h2>Item</h2>
+                <div id="cart-items">
+                    <!-- Os títulos dos produtos serão adicionados aqui -->
+                </div>
+                <div class="summary">
+                    <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                </div>
+                <a href="../html/sucesso.html"><button id="checkout-btn">Checkout</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pagamento.js"></script>
+</body>
+</html>

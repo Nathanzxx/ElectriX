@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var productImg = document.getElementById('main-product-image').src; // Obtém a imagem do produto
         addProductToCart(title, price, productImg); // Chama a função para adicionar o produto ao carrinho
         updatetotal(); // Atualiza o total do carrinho
+         uptadeCartIcon ();
     }
 
     // Função para adicionar produto ao carrinho
@@ -64,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener('change', quantityChanged);
 
         saveCartItems(); // Salva o estado do carrinho
+        uptadeCartIcon ();
+    
     }
 
     // Função para remover item do carrinho
@@ -82,10 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         updatetotal(); // Atualiza o total do carrinho
         saveCartItems(); // Salva o estado do carrinho
+        uptadeCartIcon ();
     }
-    
 
-    // Função para atualizar o total do carrinho
     function updatetotal() {
         var cartContent = document.getElementsByClassName('cart-content')[0]; // Seleciona o container do carrinho
         var cartBoxes = cartContent.getElementsByClassName('cart-box'); // Seleciona todos os itens do carrinho
@@ -101,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         total = Math.round(total * 100) / 100; // Arredonda o total
         document.getElementsByClassName('total-price')[0].innerText = '$' + total; // Atualiza o total na página
         localStorage.setItem('cartTotal', total); // Salva o total no localStorage
+    
+        // Atualiza o subtotal na página de pagamento
+        document.getElementById('subtotal').innerText = '$' + total;
     }
 
     // Função para salvar os itens do carrinho no localStorage
@@ -132,3 +137,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadCartItems(); // Carrega os itens do carrinho quando a página é carregada
 });
+
+//quantidade do carrinho
+function updateCartIcon() {
+    var cartBoxes = document.getElementsByClassName('cart-box');
+    var quantity = 0;
+    for (var i=0; i < cartBoxes.length; i++){
+        var cartBox = cartBoxes[i];
+        var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+        quantity += parseInt(quantityElement.value);
+    }
+    var cartIcon = document.querySelector("#cart-icon");
+    cartIcon.setAttribute("data-quantity", quantity);
+}
+function redirecionarParaPagamento() {
+    // Obtém os itens do carrinho do localStorage
+    var cartItems = localStorage.getItem('cartContent');
+    // Salva os itens do carrinho na sessão (para uso na página de pagamento)
+    sessionStorage.setItem('cartItems', cartItems);
+    // Redireciona para a página de pagamento
+    window.location.href = 'pagamento.html';
+}

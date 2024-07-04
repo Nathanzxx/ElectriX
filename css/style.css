@@ -353,11 +353,12 @@
   font-size: 2.5rem;
   cursor: pointer;
 }
-#cart-icon[data-quantity]::after{
-  contain: '';
+
+#cart-icon[data-quantity ="0"]::after{
+  contain: "";
 }
 #cart-icon[data-quantity]::after{
-  content: '';
+  content: attr(data-quantity);
   position: absolute;
   top: 0;
   right: -12px;
@@ -371,7 +372,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 .cart{
   position: fixed;
   top: 0;
@@ -379,7 +380,7 @@
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background:#000000;
+  background:#1bc0b2;
   box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 1000;
@@ -435,7 +436,6 @@
   color: rgb(0, 0, 0);
   cursor: pointer;
 } */
-
 .close-btn {
   position: absolute;
   top: 1rem;
@@ -443,13 +443,12 @@
   font-size: 3rem;
   background-color: transparent;
   border: none;
-  color: rgb(117, 226, 226); /* Ajuste a cor conforme necessário */
+  color: rgb(117, 226, 226);  /* Ajuste a cor conforme necessário */
   cursor: pointer;
 }
 .close-btn:hover {
   color: rgb(0, 255, 255); /* Cor quando hover */
 }
-
 .cart-box{
   display: grid;
   grid-template-columns: 32% 50% 18%;
@@ -924,7 +923,56 @@
     visibility: visible;
     transform: translateY(-10px);
   }
-  
+  .recommended-products {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 10px;
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-card .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 5px;
+}
+
+.product-card .rating {
+    margin-top: 5px;
+    color: #f39c12;
+}
   
   
   /*-----------------------------------*\
