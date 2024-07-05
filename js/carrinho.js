@@ -1,10 +1,13 @@
-// Abrir e fechar carrinho
+
+
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
+
 cartIcon.onclick = () => {
     cart.classList.add("active");
 };
+
 closeCart.onclick = () => {
     cart.classList.remove("active");
 };
@@ -20,22 +23,25 @@ document.addEventListener('DOMContentLoaded', function() {
     function addCartClicked(event) {
         var button = event.target;
         var shopProducts = button.parentElement;
+        var mainProductImage = document.getElementById('main-product-image');
+        var productId = mainProductImage.getAttribute('data-id');
         var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
         var price = shopProducts.getElementsByClassName('product-price')[0].innerText;
-        var productImg = document.getElementById('main-product-image').src;
-        addProductToCart(title, price, productImg);
+        var productImg = mainProductImage.src;
+        addProductToCart(productId, title, price, productImg);
         updatetotal();
         updateCartIcon();
     }
 
-    function addProductToCart(title, price, productImg) {
+    function addProductToCart(productId, title, price, productImg) {
         var cartShopBox = document.createElement('div');
         cartShopBox.classList.add('cart-box');
+        cartShopBox.setAttribute('data-id', productId);
         var cartItems = document.getElementsByClassName('cart-content')[0];
-        var cartItemNames = cartItems.getElementsByClassName('cart-product-title');
+        var cartItemIds = cartItems.getElementsByClassName('cart-box');
 
-        for (var i = 0; i < cartItemNames.length; i++) {
-            if (cartItemNames[i].innerText === title) {
+        for (var i = 0; i < cartItemIds.length; i++) {
+            if (cartItemIds[i].getAttribute('data-id') === productId) {
                 alert('Você já adicionou esse item no carrinho.');
                 return;
             }

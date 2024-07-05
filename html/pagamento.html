@@ -6,6 +6,47 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="../css/pagamentos.css">
 </head>
+<style>
+    .checkout-container #cart-items .cart-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-container #cart-items .cart-img {
+    width: 50px; /* Ajuste a largura da imagem do produto */
+    height: 50px; /* Ajuste a altura da imagem do produto */
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.checkout-container #cart-items .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.checkout-container #cart-items .cart-product-title {
+    font-size: 14px; /* Ajuste o tamanho da fonte do título do produto */
+    margin-bottom: 5px;
+}
+
+.checkout-container #cart-items .cart-price {
+    font-size: 14px; /* Ajuste o tamanho da fonte do preço do produto */
+}
+
+.checkout-container #cart-items .cart-quantity {
+    display: none;
+}
+
+.checkout-container #cart-items .fas.fa-trash-alt.cart-remove {
+    font-size: 14px; /* Ajuste o tamanho do ícone de remoção */
+    cursor: pointer;
+    margin-left: 10px;
+}
+</style>
 <body>
     <div class="checkout-container">
         <div class="left-column">

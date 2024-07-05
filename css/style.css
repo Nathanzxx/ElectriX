@@ -411,6 +411,7 @@
 .total-price{
   font-size: 1.075rem;
   margin: 1rem 0 0 0.7rem;
+  color: black;
 }
 .btn-buy{
   display: flex;

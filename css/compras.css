@@ -782,7 +782,13 @@ body {
 .product-purchase {
   justify-content: center;
 }
-
+.product-title{
+  font-size: 2rem;
+  color: black;
+}
+.product-details{
+  color: black;
+}
 .product-card {
   background: #fff;
   border-radius: 10px;
@@ -816,6 +822,7 @@ body {
   color: #333;
 }
 
+
 .product-card .old-price {
   text-decoration: line-through;
   color: #999;
@@ -826,7 +833,11 @@ body {
   margin-top: 5px;
   color: #f39c12;
 }
-
+.protudoimg{
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* ou 'contain', dependendo do efeito desejado */
+}
 
 /*-----------------------------------*\
     #BACK TO TOP
